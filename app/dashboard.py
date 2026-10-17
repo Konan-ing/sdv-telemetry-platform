@@ -1,7 +1,7 @@
 import os
 import requests
 import streamlit as st
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 # --- Configuration ---
 st.set_page_config(page_title="SDV Fleet Command", page_icon="🚗", layout="wide")
