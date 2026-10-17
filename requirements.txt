@@ -1,0 +1,19 @@
+# Data & ML
+numpy
+pandas
+h5py
+pyspark
+xgboost
+scikit-learn
+
+# LLM & Interface
+
+streamlit
+langchain
+langchain-community
+sentence-transformers
+faiss-cpu
+pypdf
+
+# MLops
+dvc

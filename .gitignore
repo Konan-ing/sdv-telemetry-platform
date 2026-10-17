@@ -1,0 +1,28 @@
+# Python environments and caches
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Local credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+app/.streamlit/secrets.toml
+
+# Local editor and operating-system files
+.DS_Store
+.vscode/
+.idea/
+
+# Generated telemetry data
+/data/raw/
+/data/processed/
+/data/*.parquet/
+/src/data/processed/
+*.crc
+
+# Nested checkout of this repository
+/sdv-telemetry-platform/
