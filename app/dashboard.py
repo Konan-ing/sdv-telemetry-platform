@@ -9,13 +9,17 @@ st.title("🚗 Supervision de Flotte SDV & Maintenance Prédictive")
 st.markdown("Interface connectée à l'API XGBoost et au module d'assistance LLM (LangChain + Hugging Face).")
 
 API_TIMEOUT = 30
-FASTAPI_URL = "http://127.0.0.1:8000/predict"
 HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
 HF_MODEL = "openai/gpt-oss-120b:fastest"
 
 try:
+    FASTAPI_URL = st.secrets.get(
+        "FASTAPI_URL",
+        os.environ.get("FASTAPI_URL", "http://127.0.0.1:8000/predict"),
+    )
     HF_API_TOKEN = st.secrets.get("HF_API_TOKEN", os.environ.get("HF_API_TOKEN", ""))
 except Exception:
+    FASTAPI_URL = os.environ.get("FASTAPI_URL", "http://127.0.0.1:8000/predict")
     HF_API_TOKEN = os.environ.get("HF_API_TOKEN", "")
 
 if not HF_API_TOKEN:
