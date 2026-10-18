@@ -9,8 +9,11 @@ st.title("🚗 Supervision de Flotte SDV & Maintenance Prédictive")
 st.markdown("Interface connectée à l'API XGBoost et au module d'assistance LLM (LangChain + Hugging Face).")
 
 API_TIMEOUT = 30
-HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
 HF_MODEL = "HuggingFaceH4/zephyr-7b-beta"
+# On remplace router.huggingface.co par api-inference.huggingface.co/models/...
+HF_API_URL = f"https://api-inference.huggingface.co/models/{HF_MODEL}/v1/chat/completions"
+#HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
+#HF_MODEL = "HuggingFaceH4/zephyr-7b-beta"
 
 try:
     FASTAPI_URL = st.secrets.get(
