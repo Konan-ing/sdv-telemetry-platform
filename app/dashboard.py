@@ -10,7 +10,7 @@ st.markdown("Interface connectée à l'API XGBoost et au module d'assistance LLM
 
 API_TIMEOUT = 30
 HF_API_URL = "https://router.huggingface.co/v1/chat/completions"
-HF_MODEL = "openai/gpt-oss-120b:fastest"
+HF_MODEL = "prism-ml/Ternary-Bonsai-27B-AWQ-4bit:together"
 
 try:
     FASTAPI_URL = st.secrets.get(
